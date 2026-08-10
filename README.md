@@ -5,7 +5,7 @@ Firmware for my Crosses/Bridges 36-key wireless split, the **AliExpress
 PMW3610 trackball on the right half, no displays). Matrix GPIOs, `row2col`
 diodes and trackball SPI wiring come from
 [maatthc/zmk-crosses](https://github.com/maatthc/zmk-crosses) (the 42-key clone
-config); the 3x5 matrix positions were confirmed empirically. The outer column
+config); I mapped the 3x5 matrix positions with a diagnostic firmware. The outer column
 of the 42-key design is unpopulated, and the thumbs sit on row 3 cols 3/4/5 and
 11/10/9.
 
@@ -17,12 +17,12 @@ game layers. The trackball scrolls on layers 5-7 via the PMW3610 driver's
 
 Firmware builds in GitHub Actions on every push. Flash order for a fresh pair:
 `settings_reset` on both halves, then `crosses_36_left` / `crosses_36_right`.
-The SuperMini clones have no external 32 kHz crystal, so
-`CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y` is baked into `config/crosses.conf`;
-without it the firmware hangs at boot.
+The SuperMini clones have no external 32 kHz crystal, so `config/crosses.conf`
+sets `CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y`; without it the firmware hangs at
+boot.
 
 Trackball tuning lives in the shield's `crosses_right.conf`:
-`CONFIG_PMW3610_CPI` / `CONFIG_PMW3610_CPI_DIVIDOR` (currently 1600/4 = 400
+`CONFIG_PMW3610_CPI` / `CONFIG_PMW3610_CPI_DIVIDOR` (1600/4 = 400
 effective), orientation/invert flags alongside.
 
 ![Keymap](keymap-drawer/crosses.svg)

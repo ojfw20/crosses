@@ -1,6 +1,6 @@
 #include "crosses.dtsi"
 
-&diag_transform {
+&default_transform {
     col-offset = <6>;
 };
 

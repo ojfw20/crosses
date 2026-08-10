@@ -11,8 +11,11 @@ Firmware builds in GitHub Actions on every push. Flash order for a fresh pair:
 `settings_reset` on both halves, then `crosses_36_left` / `crosses_36_right`
 (use the `_internal_osc` variants if Bluetooth is unstable on the SuperMinis).
 
-Tuning knobs live in `config/crosses.keymap`: trackball CPI via
-`&trackball_central { cpi = <...>; };`, scroll speed/direction in the
-`scroller` input-processor node.
+Tuning knobs: scroll speed/direction is the `scroller` input-processor node in
+`config/crosses.keymap`. Trackball CPI defaults to 700, set in the GGGW shield
+module (`gggw-zmk-keebs`, `crosses_right.overlay`) - to change it, add an
+overlay with `&trackball_central { cpi = <...>; };` and pass it to the right-half
+builds via `-DEXTRA_DTC_OVERLAY_FILE` in `build.yaml` (it can't go in the shared
+keymap; the node only exists on right-half builds).
 
 ![Keymap](keymap-drawer/crosses.svg)

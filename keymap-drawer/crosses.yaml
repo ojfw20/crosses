@@ -18,7 +18,7 @@ layers:
     - {t: Mouse, h: Mouse}
     - {t: ENTER, h: Sym}
     - {t: BSPC, h: Nav}
-    - ESC
+    - {t: Mouse, h: Mouse}
   Nav:
   - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
   - [TAB, '`', PREV, PP, NEXT, '''', LARW, DARW, UARW, RARW]

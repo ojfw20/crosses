@@ -62,7 +62,7 @@
 &kp Q        &kp W       &kp F       &kp P        &kp B            &kp J        &kp L        &kp U       &kp Y       &kp SEMI
 &ht LCTRL A  &ht LALT R  &ht LGUI S  &ht LSHFT T  &ht TAB G        &ht TAB M    &ht LSHFT N  &ht LGUI E  &ht LALT I  &ht LCTRL O
 &kp Z        &kp X       &kp C       &kp D        &kp V            &kp K        &kp H        &kp COMMA   &kp PERIOD  &kp SLASH
-                         &kp LSHFT   &kp SPACE    &mo_tog 4 4      &lt 2 ENTER  &lt 1 BSPC   &kp ESC
+                         &kp LSHFT   &kp SPACE    &mo_tog 4 4      &lt 2 ENTER  &lt 1 BSPC   &mo_tog 4 4
             >;
         };
 

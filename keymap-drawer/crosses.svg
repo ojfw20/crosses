@@ -286,8 +286,11 @@ path.combo {
 </a></g>
 <g transform="translate(480, 196)" class="key keypos-35">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap">ESC</text>
-</g>
+<a href="#Mouse">
+<text x="0" y="0" class="key tap layer-activator">Mouse</text>
+</a><a href="#Mouse">
+<text x="0" y="24" class="key hold layer-activator">Mouse</text>
+</a></g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="301" y="15" width="28" height="26" class="combo"/>
 <text x="315" y="28" class="combo tap">ESC</text>

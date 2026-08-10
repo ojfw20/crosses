@@ -16,9 +16,9 @@ layers:
   - - LSHFT
     - SPACE
     - {t: Mouse, h: Mouse}
+    - {t: Mouse, h: Mouse}
     - {t: ENTER, h: Sym}
     - {t: BSPC, h: Nav}
-    - {t: Mouse, h: Mouse}
   Nav:
   - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
   - [TAB, '`', PREV, PP, NEXT, '''', LARW, DARW, UARW, RARW]
@@ -36,8 +36,8 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
     - {t: ▽, type: trans}
+    - {type: held}
   Sym:
   - - ESC
     - {t: ▽, type: trans}
@@ -63,8 +63,8 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
     - {t: ▽, type: trans}
+    - {type: held}
     - {t: ▽, type: trans}
   System:
   - - {t: ▽, type: trans}
@@ -100,9 +100,9 @@ layers:
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {type: held}
-    - {type: held}
     - {t: ▽, type: trans}
+    - {type: held}
+    - {type: held}
   Mouse:
   - - ESC
     - {t: ▽, type: trans}

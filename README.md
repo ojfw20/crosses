@@ -22,7 +22,7 @@ sets `CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y`; without it the firmware hangs at
 boot.
 
 Trackball tuning lives in the shield's `crosses_right.conf`:
-`CONFIG_PMW3610_CPI` / `CONFIG_PMW3610_CPI_DIVIDOR` (1600/4 = 400
+`CONFIG_PMW3610_CPI` / `CONFIG_PMW3610_CPI_DIVIDOR` (3200/4 = 800
 effective), orientation/invert flags alongside.
 
 ![Keymap](keymap-drawer/crosses.svg)

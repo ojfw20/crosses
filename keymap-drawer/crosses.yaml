@@ -1,141 +1,257 @@
-layout: {zmk_keyboard: crosses, layout_name: gggw_crosses_36_layout}
+layout: {ortho_layout: {split: true, rows: 3, columns: 5, thumbs: 3}}
 layers:
   Base:
-  - - {t: '$$mdi:apple-keyboard-shift$$+Q', h: Q}
-    - {t: '$$mdi:apple-keyboard-shift$$+W', h: W}
-    - {t: '$$mdi:apple-keyboard-shift$$+E', h: E}
-    - {t: '$$mdi:apple-keyboard-shift$$+R', h: R}
-    - {t: '$$mdi:apple-keyboard-shift$$+T', h: T}
-    - {t: '$$mdi:apple-keyboard-shift$$+Y', h: Y}
-    - {t: '$$mdi:apple-keyboard-shift$$+U', h: U}
-    - {t: '$$mdi:apple-keyboard-shift$$+I', h: I}
-    - {t: '$$mdi:apple-keyboard-shift$$+O', h: O}
-    - {t: '$$mdi:apple-keyboard-shift$$+P', h: P}
-  - - {t: '$$mdi:apple-keyboard-shift$$+A', h: A}
-    - {t: '$$mdi:apple-keyboard-shift$$+S', h: S}
-    - {t: '$$mdi:apple-keyboard-shift$$+D', h: D}
-    - {t: '$$mdi:apple-keyboard-shift$$+F', h: F}
-    - {t: '$$mdi:apple-keyboard-shift$$+G', h: G}
-    - {t: '$$mdi:apple-keyboard-shift$$+H', h: H}
-    - {t: '$$mdi:apple-keyboard-shift$$+J', h: J}
-    - {t: '$$mdi:apple-keyboard-shift$$+K', h: K}
-    - {t: '$$mdi:apple-keyboard-shift$$+L', h: L}
-    - {t: '$$mdi:apple-keyboard-shift$$+''', h: ''''}
-  - - {t: '$$mdi:apple-keyboard-shift$$+Z', h: Z}
-    - {t: '$$mdi:apple-keyboard-shift$$+X', h: X}
-    - {t: '$$mdi:apple-keyboard-shift$$+C', h: C}
-    - {t: '$$mdi:apple-keyboard-shift$$+V', h: V}
-    - {t: '$$mdi:apple-keyboard-shift$$+B', h: B}
-    - {t: '$$mdi:apple-keyboard-shift$$+N', h: N}
-    - {t: '$$mdi:apple-keyboard-shift$$+M', h: M}
-    - $$mdi:apple-keyboard-control$$
-    - $$mdi:apple-keyboard-option$$
-    - {t: '$$mdi:apple-keyboard-shift$$+.', h: .}
-  - - {t: LEFT GUI, h: Mouse}
-    - Lower
-    - $$mdi:keyboard-space$$
-    - $$mdi:keyboard-return$$
-    - Raise
-    - $$mdi:backspace$$
-  Lower:
-  - ['!', '@', '#', $, '%', ^, '&', '*', (, )]
-  - - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-    - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-    - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-    - {h: '4', s: '$$mdi:bluetooth-connect$$'}
-    - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-    - $$mdi:arrow-left-bold$$
-    - $$mdi:arrow-down-bold$$
-    - $$mdi:arrow-up-bold$$
-    - $$mdi:arrow-right-bold$$
-    - {t: '$$mdi:transfer$$', type: trans}
-  - - $$mdi:bluetooth-off$$
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-  - - LGUI
+  - [Q, W, F, P, B, J, L, U, Y, ;]
+  - - {t: A, h: LCTRL}
+    - {t: R, h: LALT}
+    - {t: S, h: LGUI}
+    - {t: T, h: LSHFT}
+    - {t: G, h: TAB}
+    - {t: M, h: TAB}
+    - {t: N, h: LSHFT}
+    - {t: E, h: LGUI}
+    - {t: I, h: LALT}
+    - {t: O, h: LCTRL}
+  - [Z, X, C, D, V, K, H, ',', ., /]
+  - - LSHFT
+    - SPACE
+    - {t: Mouse, h: Mouse}
+    - {t: ENTER, h: Sym}
+    - {t: BSPC, h: Nav}
+    - ESC
+  Nav:
+  - ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+  - [TAB, '`', PREV, PP, NEXT, '''', LARW, DARW, UARW, RARW]
+  - - '&caps_word'
+    - LALT
+    - VOL DN
+    - VOL UP
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - HOME
+    - PG DN
+    - PG UP
+    - END
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {type: held}
-    - $$mdi:keyboard-space$$
-    - $$mdi:keyboard-return$$
-    - $$mdi:keyboard-esc$$
-    - $$mdi:keyboard-tab$$
-  Raise:
-  - - {t: '!', h: '1'}
-    - {t: '@', h: '2'}
-    - {t: '#', h: '3'}
-    - {t: $, h: '4'}
-    - {t: '%', h: '5'}
-    - {t: ^, h: '6'}
-    - {t: '&', h: '7'}
-    - {t: '*', h: '8'}
-    - {t: (, h: '9'}
-    - {t: ), h: '0'}
-  - - {t: _, h: '-'}
-    - {t: +, h: '='}
-    - '{'
-    - '['
-    - (
-    - )
+    - {t: ▽, type: trans}
+  Sym:
+  - - ESC
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - F1
+    - F2
+    - F3
+    - F4
+    - DEL
+  - [TAB, '[', '{', (, '=', F5, F6, F7, F8, '''']
+  - - \
     - ']'
     - '}'
-    - {t: '?', h: /}
-    - {t: '|', h: \}
-  - - {t: '~', h: '`'}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: <, h: ','}
-    - ':'
-    - ;
-    - {t: '>', h: .}
-    - $$mdi:apple-keyboard-control$$
-    - $$mdi:apple-keyboard-option$$
-    - {t: '$$mdi:transfer$$', type: trans}
-  - - LGUI
-    - $$mdi:keyboard-esc$$
-    - $$mdi:keyboard-space$$
-    - $$mdi:keyboard-return$$
+    - )
+    - '-'
+    - F9
+    - F10
+    - F11
+    - F12
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {type: held}
-    - $$mdi:keyboard-tab$$
-  Mouse:
-  - - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  System:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: BT, h: '0'}
+    - {t: Game, h: toggle}
     - '&studio_unlock'
-  - - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:mouse-right-click$$', h: right}
-    - {t: '$$mdi:mouse$$', h: middle}
-    - {t: '$$mdi:mouse-left-click$$', h: left}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-  - - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-  - - {type: held}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
-    - {t: '$$mdi:transfer$$', type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - '&bootloader'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: BT, h: '1'}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&bootloader'
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - BT CLR
+    - {t: ▽, type: trans}
+    - {t: BT, h: '2'}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {type: held}
+    - {t: ▽, type: trans}
+  Mouse:
+  - - ESC
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: Game, h: toggle}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&mkp MCLK'
+    - '&mkp LCLK'
+    - '&mkp RCLK'
+    - {t: Scroll, h: Scroll}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - PG DN
+    - PG UP
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Scroll:
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '&mkp MCLK'
+    - '&mkp LCLK'
+    - '&mkp RCLK'
+    - {type: held}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Game:
+  - - T
+    - Q
+    - W
+    - E
+    - R
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: Base, h: toggle}
+  - - G
+    - A
+    - S
+    - D
+    - F
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - Z
+    - X
+    - C
+    - V
+    - LCTRL
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - LSHFT
+    - SPACE
+    - {t: Game2, h: Game2}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Game2:
+  - - ESC
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: Base, h: toggle}
+  - - TAB
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - LALT
+    - '9'
+    - '0'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: Game, h: toggle, type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+combos:
+- p: [4, 5]
+  k: ESC
+  l: [Base]

@@ -1,21 +1,28 @@
 # Crosses ZMK config
 
-Firmware for my GGGW Crosses/Bridges 36-key wireless split (SuperMini nRF52840,
-trackball on the right half, no displays). The layout is a straight port of my
-Charybdis nano keymap ([ojfw20/charybdis](https://github.com/ojfw20/charybdis)):
-Colemak-DH with home-row mods, tri-layer nav/sym, explicit mouse and scroll
-layers, and two game layers. Based on the official
-[crosses-zmk](https://github.com/Good-Great-Grand-Wonderful/crosses-zmk) template.
+Firmware for my Crosses/Bridges 36-key wireless split, the **AliExpress
+"MiaoMiao PCB" variant**, not a genuine GGGW board (SuperMini nRF52840 clones,
+PMW3610 trackball on the right half, no displays). Matrix GPIOs, `row2col`
+diodes and trackball SPI wiring come from
+[maatthc/zmk-crosses](https://github.com/maatthc/zmk-crosses) (the 42-key clone
+config); the 3x5 matrix positions were confirmed empirically. The outer column
+of the 42-key design is unpopulated, and the thumbs sit on row 3 cols 3/4/5 and
+11/10/9.
+
+The layout is a straight port of my Charybdis nano keymap
+([ojfw20/charybdis](https://github.com/ojfw20/charybdis)): Colemak-DH with
+home-row mods, tri-layer nav/sym, explicit mouse and scroll layers, and two
+game layers. The trackball scrolls on layers 5-7 via the PMW3610 driver's
+`scroll-layers` property.
 
 Firmware builds in GitHub Actions on every push. Flash order for a fresh pair:
-`settings_reset` on both halves, then `crosses_36_left` / `crosses_36_right`
-(use the `_internal_osc` variants if Bluetooth is unstable on the SuperMinis).
+`settings_reset` on both halves, then `crosses_36_left` / `crosses_36_right`.
+The SuperMini clones have no external 32 kHz crystal, so
+`CONFIG_CLOCK_CONTROL_NRF_K32SRC_RC=y` is baked into `config/crosses.conf`;
+without it the firmware hangs at boot.
 
-Tuning knobs: scroll speed/direction is the `scroller` input-processor node in
-`config/crosses.keymap`. Trackball CPI defaults to 700, set in the GGGW shield
-module (`gggw-zmk-keebs`, `crosses_right.overlay`) - to change it, add an
-overlay with `&trackball_central { cpi = <...>; };` and pass it to the right-half
-builds via `-DEXTRA_DTC_OVERLAY_FILE` in `build.yaml` (it can't go in the shared
-keymap; the node only exists on right-half builds).
+Trackball tuning lives in the shield's `crosses_right.conf`:
+`CONFIG_PMW3610_CPI` / `CONFIG_PMW3610_CPI_DIVIDOR` (currently 1600/4 = 400
+effective), orientation/invert flags alongside.
 
 ![Keymap](keymap-drawer/crosses.svg)

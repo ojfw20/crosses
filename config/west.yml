@@ -1,19 +1,16 @@
 manifest:
-  defaults:
-    revision: main
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: Good-Great-Grand-Wonderful
-      url-base: https://github.com/Good-Great-Grand-Wonderful
+    - name: inorichi
+      url-base: https://github.com/inorichi
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: ac7f75b8591d39aaf3b66b9d26f26c9ed921a009
+      revision: v0.3.0
       import: app/west.yml
-    - name: gggw-zmk-keebs
-      remote: Good-Great-Grand-Wonderful
-      revision: zephyr-4.1
-      import: config/west.yml
+    - name: zmk-pmw3610-driver
+      remote: inorichi
+      revision: main
   self:
     path: config

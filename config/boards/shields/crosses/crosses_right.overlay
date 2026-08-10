@@ -1,0 +1,12 @@
+#include "crosses.dtsi"
+
+&diag_transform {
+    col-offset = <6>;
+};
+
+/ {
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+    };
+};

@@ -1,0 +1,13 @@
+file_format: "1"
+id: crosses
+name: Crosses (MiaoMiao)
+type: shield
+url: https://github.com/ojfw20/crosses
+requires: [nice_nano_v2]
+features:
+  - keys
+  - pointer
+  - studio
+siblings:
+  - crosses_left
+  - crosses_right

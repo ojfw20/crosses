@@ -14,3 +14,8 @@ include:
     shield: crosses_left
     artifact-name: crosses_36_left_usblog
     snippet: zmk-usb-logging
+  # USB logging claims the CDC port, so no studio-rpc-usb-uart here.
+  - board: nice_nano_v2
+    shield: crosses_right
+    artifact-name: crosses_36_right_usblog
+    snippet: zmk-usb-logging
